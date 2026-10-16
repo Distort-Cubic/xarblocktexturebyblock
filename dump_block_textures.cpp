@@ -1,3 +1,4 @@
+
 #include "block_textures.h"
 
 #include <map>
@@ -5,11 +6,20 @@
 #include <string>
 #include <cstdint>
 #include <iostream>
+#include <fstream>
 
 int main()
 {
     constexpr int MAX_BLOCK_ID = 28131;
     constexpr int MAX_TEXTURE_ID = 250;
+
+    std::ofstream out("out.txt");
+
+    if (!out.is_open())
+    {
+        std::cerr << "Failed to open out.txt for writing.\n";
+        return 1;
+    }
 
     // Texture name -> list of block IDs
     std::map<std::string, std::vector<int>> blocksByTexture;
@@ -41,13 +51,15 @@ int main()
     // Print every texture name, even when no blocks use it.
     for (const auto& entry : blocksByTexture)
     {
-        std::cout << entry.first << '\n';
+        out << entry.first << '\n';
 
         for (int blockID : entry.second)
-            std::cout << "  " << blockID << '\n';
+            out << "  " << blockID << '\n';
 
-        std::cout << '\n';
+        out << '\n';
     }
+
+    out.close();
 
     return 0;
 }
