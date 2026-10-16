@@ -4,14 +4,14 @@
 #include <map>
 #include <vector>
 #include <string>
-#include <cstdint>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 int main()
 {
     constexpr int MAX_BLOCK_ID = 28131;
-    constexpr int MAX_TEXTURE_ID = 250;
+    constexpr int MAX_TEXTURE_ID = 243;
 
     std::ofstream out("out.txt");
 
@@ -21,20 +21,26 @@ int main()
         return 1;
     }
 
-    // Texture name -> list of block IDs
-    std::map<std::string, std::vector<int>> blocksByTexture;
+    // Texture ID -> texture name
+    std::map<int, std::string> textureNames;
 
-    // Initialize every known texture name, including those with no blocks.
+    // Texture ID -> list of block IDs
+    std::map<int, std::vector<int>> blocksByTexture;
+
+    // Initialize every known texture, including textures with no blocks.
     for (int textureID = 0; textureID <= MAX_TEXTURE_ID; ++textureID)
     {
         std::string name = TexIDToTexStr(textureID);
 
         if (!name.empty())
-            blocksByTexture.try_emplace(name);
+        {
+            textureNames[textureID] = name;
+            blocksByTexture[textureID] = {};
+        }
     }
 
-    // Build the reverse lookup: texture name -> block IDs.
-    for (int blockID = 0; blockID < MAX_BLOCK_ID; ++blockID)
+    // Build the reverse lookup: texture ID -> block IDs.
+    for (int blockID = 0; blockID <= MAX_BLOCK_ID; ++blockID)
     {
         int textureID = BlockTexOfXarBlockType(blockID);
 
@@ -42,24 +48,37 @@ int main()
         if (textureID < 0 || textureID > MAX_TEXTURE_ID)
             continue;
 
-        std::string name = TexIDToTexStr(textureID);
-
-        if (!name.empty())
-            blocksByTexture[name].push_back(blockID);
+        // Only include IDs corresponding to known texture names.
+        if (textureNames.find(textureID) != textureNames.end())
+        {
+            blocksByTexture[textureID].push_back(blockID);
+        }
     }
 
-    // Print every texture name, even when no blocks use it.
-    for (const auto& entry : blocksByTexture)
+    // Write output sorted by texture ID, then block ID.
+    for (auto& entry : blocksByTexture)
     {
-        out << entry.first << '\n';
+        int textureID = entry.first;
+        std::vector<int>& blockIDs = entry.second;
 
-        for (int blockID : entry.second)
+        // Sort block IDs in ascending order.
+        std::sort(blockIDs.begin(), blockIDs.end());
+
+        // Print texture name.
+        out << textureNames[textureID] << '\n';
+
+        // Print associated block IDs.
+        for (int blockID : blockIDs)
+        {
             out << "  " << blockID << '\n';
+        }
 
         out << '\n';
     }
 
     out.close();
+
+    std::cout << "Successfully wrote sorted output to out.txt\n";
 
     return 0;
 }
