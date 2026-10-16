@@ -1,5 +1,3 @@
-INVALID_ID
-
 [[File:block_concrete_border.jpg]]
 * SOLID_BORING
 * ROOT
@@ -2580,7 +2578,7 @@ None
 [[File:block_dan_house_hall.jpg]]
 * DAN_HOUSE_BLOCK_HALL
 
-[[File:block_dan_house_library.jpg]]
+[[File:Block_dan_house_library.png]]
 * I2_LIBRARY_TOWER
 * I2_LIBRARY_TOWER_INFO
 * DAN_HOUSE_BLOCK_LIBRARY
@@ -2788,7 +2786,7 @@ None
 * GROUP_3_ABOVE_YELLOW
 * GROUP_3_REBOOT
 
-[[File:block_glass.jpg]]
+[[File:Block glass.png]]
 * GLASS
 * GLASS_HOLE
 * HIGH_VOLTAGE_2
@@ -2828,7 +2826,7 @@ None
 * TWEED_DUM_CASE_2
 * TWEED_DUM_CASE_SECRET
 
-[[File:block_key_yellow.jpg]]
+[[File:key_yellow.jpg]]
 * SOLID_BORING_KEY_YELLOW
 * YW_GATEDCOM_BOSS_3
 * DAN_HOUSE_GARAGE_YELLOW_KEY
@@ -3025,7 +3023,7 @@ None
 * VIOLETS_OUT_4_MAP
 * YING_TREE_INNER_MAP
 
-[[File:block_upgrade_station.jpg]]
+[[File:ent_upgrade_station.jpg]]
 * SOLID_BORING_UPGRADE_STATION
 * LARGE_CANNON_PYRAMID_UPGRADE_STATION
 * APPLE_TREE_TOP_1
@@ -3056,13 +3054,13 @@ None
 [[File:block_dark_green_x.jpg]]
 * SOLID_BORING_DARK_GREEN_X
 
-[[File:block_red_heart_black_back.jpg]]
+[[File:block_red_heart_black_background.jpg]]
 * SOLID_BORING_RED_HEART_BLACK_BACK
 
-[[File:block_key_blue.jpg]]
+[[File:key_blue.jpg]]
 * SOLID_BORING_KEY_BLUE
 
-[[File:block_key_green.jpg]]
+[[File:key_green.jpg]]
 * SOLID_BORING_KEY_GREEN
 * STARKSBORO_GREEN_KEY
 
@@ -3088,4 +3086,3 @@ None
 
 [[File:block_phage_factory.jpg]]
 None
-
