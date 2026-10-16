@@ -608,6 +608,7 @@ INVALID_ID
 * RENDER_TESTS_1
 
 [[File:block_test.jpg]]
+None
 
 [[File:block_concrete_checker_dark.jpg]]
 * SOLID_BORING_CONCRETE_CHECKER_DARK
@@ -1305,6 +1306,7 @@ INVALID_ID
 * I3_TREETOP_INNER_TRUNK
 
 [[File:block_concrete_brown_yellow_border.jpg]]
+None
 
 [[File:block_concrete_brown_orange_border.jpg]]
 * SOLID_BORING_CONCRETE_BROWN_ORANGE_BORDER
@@ -1774,8 +1776,10 @@ INVALID_ID
 * STOPPER_PLANE_Z_UP_HARD
 
 [[File:block_one_way_green.jpg]]
+None
 
 [[File:block_one_way_red.jpg]]
+None
 
 [[File:block_anti_plug.jpg]]
 * ANTI_PLUG_CHILD
@@ -2121,6 +2125,7 @@ INVALID_ID
 * YW_2
 
 [[File:block_ying2_pattern.jpg]]
+None
 
 [[File:block_high_voltage.jpg]]
 * HIGH_VOLTAGE
@@ -2488,6 +2493,7 @@ INVALID_ID
 * SPACE_TOP_2_FORBIDDEN_PLANET_CASE
 
 [[File:block_mylantis_customs.jpg]]
+None
 
 [[File:block_spiral.jpg]]
 * SOLID_BORING_SPIRAL
@@ -2693,6 +2699,7 @@ INVALID_ID
 * BURLINGTON_CITY_BUILDING_ROOM_GATO_GREEN_AMMO
 
 [[File:block_omega2.jpg]]
+None
 
 [[File:block_exit.jpg]]
 * SOLID_BORING_EXIT
@@ -2707,6 +2714,7 @@ INVALID_ID
 * STEEL_BOX
 
 [[File:block_in_only.jpg]]
+None
 
 [[File:block_moon_ice.jpg]]
 * MOON_ICE
@@ -2960,6 +2968,7 @@ INVALID_ID
 * SPACE_TOP_YELLOW_LOCKBOX_HEAVY_1
 
 [[File:block_sponge.jpg]]
+None
 
 [[File:block_ammo.jpg]]
 * SOLID_BORING_AMMO
@@ -3072,9 +3081,11 @@ INVALID_ID
 * 27703
 
 [[File:block_carrier.jpg]]
+None
 
 [[File:striped_green.jpg]]
 * SOLID_BORING_STRIPED_GREEN
 
 [[File:block_phage_factory.jpg]]
+None
 
